@@ -161,16 +161,3 @@ To install the required packages and libraries, run this command in the project 
 
 - The model can predict the prices for the houses entered by the end user.
 - Implementation of Linear Regression can be done in all the Supervised Learning Data.
-## Screenshots
-
-**Demo: https://boston-houseprice-prediction04.herokuapp.com/**
-
-
-**INDEX PAGE**
-
-![App Screenshot](https://github.com/khwajaavais/Boston-House-Price-Prediction/blob/ab2077afb5ee1206e1c8a1d21d4aa20d84543f78/templates/127.0.0.1_5000_(screenshot).png)
-
-
-**RESULT PAGE**
-
-![App Screenshot](https://github.com/khwajaavais/Boston-House-Price-Prediction/blob/ab2077afb5ee1206e1c8a1d21d4aa20d84543f78/templates/127.0.0.1_5000_predict(screenshot).png)
