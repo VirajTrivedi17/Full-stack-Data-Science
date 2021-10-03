@@ -168,9 +168,9 @@ To install the required packages and libraries, run this command in the project 
 
 **INDEX PAGE**
 
-![App Screenshot](https://github.com/khwajaavais/Boston-House-Price-Prediction/blob/ab2077afb5ee1206e1c8a1d21d4aa20d84543f78/templates/127.0.0.1_5000_(screenshot).png)
+![App Screenshot](https://github.com/VirajTrivedi17/Full-stack-Data-Science/blob/f878c07b0226cff7266f659cd506e314f4b43949/Machine%20Learning%20Practical%20Assignments/Boston%20House%20Price%20Prediction/templates/INDEX%20-%20screenshot.png)
 
 
 **RESULT PAGE**
 
-![App Screenshot](https://github.com/khwajaavais/Boston-House-Price-Prediction/blob/ab2077afb5ee1206e1c8a1d21d4aa20d84543f78/templates/127.0.0.1_5000_predict(screenshot).png)
+![App Screenshot](https://github.com/VirajTrivedi17/Full-stack-Data-Science/blob/f878c07b0226cff7266f659cd506e314f4b43949/Machine%20Learning%20Practical%20Assignments/Boston%20House%20Price%20Prediction/templates/RESULTS%20-%20screenshot.png)
