@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html>
+            <style>
+        input[type=text], select {
+        width: 65%;
+        /* height: 40px; */
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1.5px solid #ccc;
+        border-radius: 4.5px;
+        box-sizing: border-box;
+
+        /* align: center; */
+        }
+
+        input[type=submit] {
+        width: 30%;
+        background-color: #000080;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: 	#5499C7;
+        }
+
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 75%;
+        align: center;
+		opacity: 0.9;
+        }
+
+        H1 {color: #000080; font-size: 75px}
+        H4,H3 {color: #000080; font-size: 25px}
+		H2 {color: black; font-size: 25px}
+		
+		label {font-size: 17.5px;
+				font-weight: bold;}
+
+        </style>
+
+
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+
+
+        <title>Boston House Price Prediction</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+
+    <body>
+
+        <h1 align="center">Boston House Price Prediction</h1>
+        <h3 align="center">Random Forest Regression Model</h3>
+
+        <style>
+            body{
+                background-image: url('https://c4.wallpaperflare.com/wallpaper/447/510/359/architecture-building-cityscape-skyscraper-wallpaper-preview.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+                }
+        </style>
+
+<div align="center" style = "position:absolute; left:10%">
+  <form action="{{ url_for('predict')}}"  method="post">
+
+ 
+		<h2>	  {{ prediction_text }} </h2>
+
+  </form>  
+</div>
+
+
+        
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        
+    </body>
+
+</html>

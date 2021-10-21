@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html>
+            <style>
+        input[type=text], select {
+        width: 65%;
+        /* height: 40px; */
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1.5px solid #ccc;
+        border-radius: 4.5px;
+        box-sizing: border-box;
+
+        /* align: center; */
+        }
+
+        input[type=submit] {
+        width: 30%;
+        background-color: #000080;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: 	#5499C7;
+        }
+
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 75%;
+        align: center;
+		opacity: 0.9;
+        }
+
+        H1 {color: #000080; font-size: 75px}
+        H4,H3 {color: #000080; font-size: 25px}
+		H2 {color: black; font-size: 25px}
+		
+		label {font-size: 17.5px;
+				font-weight: bold;}
+
+        </style>
+
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+
+
+        <title>Boston House Price Prediction</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+
+    <body>
+
+        <h1 align="center">Boston House Price Prediction</h1>
+        <h3 align="center">Random Forest Regression Model</h3>
+
+        <style>
+            body{
+                background-image: url('https://c4.wallpaperflare.com/wallpaper/447/510/359/architecture-building-cityscape-skyscraper-wallpaper-preview.jpg');
+				<!-- 
+				https://upload.wikimedia.org/wikipedia/commons/b/b8/BostonHouse.jpg
+				https://miro.medium.com/max/1200/1*l6015d76-1OYXP6NqG2t8Q.png 
+				-->
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+                }
+        </style>
+
+<div align="center" style = "position:absolute; left:10%">
+  <form action="{{ url_for('predict')}}"  method="post">
+
+
+            <label for="CRIM">Crime Rate</label><br>
+            <input type="text" id="CRIM" name="CRIM" placeholder="Per Capital Crime Rate (in %)" required="required"><br>
+            <br>
+                <label for="ZN">ZN </label><br>
+                <input type="text" id="ZN" name="ZN" placeholder=" Proportional of Residental land zone (in %)" required="required"><br>
+            <br>
+
+                <label for="CHAS">Is house near Charles River ?</label><br>
+                <select id="CHAS" name="CHAS">
+                <option value="1">YES</option>
+                <option value="0">NO</option>
+                </select>
+
+
+            <br><br>
+
+                <label for="NOX" >NOX</label><br>
+                <input type="text" id="NOX" name="NOX" placeholder="Nitric Oxides Concentration (in %)" required="required"><br>
+            
+            <br>
+                <label for="RM">RM (between 3 and 8)</label><br>
+                <input type="text" id="RM" name="RM" placeholder="Average No. of Rooms per Houses" required="required"><br>
+            
+            <br>
+                <label for="AGE">AGE (in years since house built)</label><br>
+                <input type="text" id="AGE" name="AGE" placeholder="Owner-occupied units built " required="required"><br>
+            
+            <br>
+                <label for="DIS">DISTANCE</label><br>
+                <input type="text" id="DIS" name="DIS" placeholder="Distance to Boston Employment Centre (in kms)" required="required"><br>
+
+            <br>
+                <label for="RAD">RAD</label><br>
+                <input type="text" id="RAD" name="RAD" placeholder="No.of Accessible Highways (in Count)" required="required"><br>
+
+            <br>    
+                <label for="lname">PT RATIO </label><br>
+                <input type="text" id="PT_RATIO" name="PT_RATIO" placeholder="Pupil Teacher Ratio" required="required"><br>
+            
+            <br>    
+                <label for="lname">LSTAT</label><br>
+                <input type="text" id="LSTAT" name="LSTAT" placeholder="Lower Status of Population (in %)" required="required"><br><br>
+  
+    <input type="submit" value="Submit">
+
+
+  </form>
+  
+
+  
+  
+</div>
+
+
+        
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        
+    </body>
+
+</html>
