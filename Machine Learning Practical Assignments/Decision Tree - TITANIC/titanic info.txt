@@ -1,0 +1,41 @@
+<pre>
+<h2 align='center'>Features</h2>
+    <b>1. Survived</b>
+    The first feature reported if a traveler lived or died. A comparison revealed that more than 60% of the passengers 
+    had died.
+    
+    <b>2. Pclass</b>
+    This feature renders the passenger division. The tourists could opt from three distinct sections, namely class-1,
+    class-2, class-3. The third class had the highest number of commuters, followed by class-2 and class-1. The number 
+    of tourists in the third class was more than the number of passengers in the first and second class combined. The 
+    survival chances of a class-1 traveler were higher than a class-2 and class-3 traveler.
+
+    <b>3. Sex</b>
+    Approximately 65% of the tourists were male while the remaining 35% were female. Nonetheless, the percentage of 
+    female survivors was higher than the number of male survivors. More than 80% of male commuters died, as compared to 
+    around 70% female commuters.
+    
+    <b>4. Age</b>
+    The youngest traveler onboard was aged around two months and the oldest traveler was 80 years. The average age of 
+    tourists onboard was just under 30 years. Clearly, a larger fraction of children under 10 survived than died or 
+    every other age group, the number of casualties was higher than the number of survivors. More than 140 people 
+    within the age group 20 and 30 were dead as compared to just around 80 people of the same age range sustained.
+
+    <b>5. SibSp</b>
+    SibSp is the number of siblings or spouse of a person onboard. A maximum of 8 siblings and spouses traveled along 
+    with one of the traveler. More than 90% of people traveled alone or with one of their sibling or spouse. The 
+    chances of survival dropped drastically if someone traveled with more than 2 siblings or spouse.
+    
+    <b>6. Parch</b>
+    Similar to the SibSp, this feature contained the number of parents or children each passenger was touring with. 
+    A maximum of 9 parents/children traveled along with one of the traveler.
+    
+    <b>7. Fare</b>
+    By splitting the fare amount into four categories, it was obvious that there was a strong association between 
+    the charge and the survival. The higher a tourist paid, the higher would be his chances to survive.
+    
+    <b>8. Embarked</b>
+    Embarked implies where the traveler mounted from. There are three possible values for Embark — Southampton, 
+    Cherbourg, and Queenstown. More than 70% of the people boarded from Southampton. Just under 20% boarded from 
+    Cherbourg and the rest boarded from Queenstown. People who boarded from Cherbourg had a higher chance of 
+    survival than people who boarded from Southampton or Queenstown.
