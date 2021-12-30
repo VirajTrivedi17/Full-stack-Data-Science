@@ -1,0 +1,181 @@
+<!doctype html>
+
+<html>
+            <style>
+        input[type=text], select {
+        width: 65%;
+        /* height: 40px; */
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+          
+
+        /* align: center; */
+        }
+
+        input[type=submit] {
+        width: 30%;
+        background-color: #808080;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #000000;
+        }
+
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 75%;
+        align: center;     
+		padding-bottom : 20px;
+		opacity: 0.95;
+        }
+
+        H1 {color: #000000; font-size: 55px}
+        H4,H3 {color: #000000; font-size: 20px}
+		H2 {color: black; font-size: 25px}
+
+        </style>
+
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+
+
+        <title>Census Income Classification</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+
+    <body>
+
+   	<h1 align="center">CENSUS INCOME CLASSIFICATION</h1>
+        <h3 align="center">XG BOOST CLASSIFICATION MODEL</h3><br>
+
+        <style>
+
+            body{
+                background-image: url('https://miro.medium.com/max/1000/1*08ltbgXFxujakJZSJswp1Q.png');
+				<!-- https://www.thebluediamondgallery.com/wooden-tile/images/income.jpg 
+				https://thumbs.dreamstime.com/z/income-increase-concept-upward-pile-coins-income-increase-concept-upward-pile-money-101863038.jpg
+				https://cdn5.vectorstock.com/i/1000x1000/23/24/income-vector-5992324.jpg
+				-->
+				background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                }
+        </style>
+
+	<div align="center" style = "position:absolute; left:10%; ">
+	  <form action="{{ url_for('predict')}}"  method="Post">
+
+				
+				<label for="age">AGE (in Years)</label><br>
+				<input type="text" id="age" name="age" placeholder="Age of the Individual" required="required">
+
+            <br><br>
+                <label for="gender">GENDER</label><br>
+					<select id="gender" name="gender">
+					<option value="1">MALE</option>
+					<option value="0">FEMALE</option>
+				</select>
+
+            <br><br>
+                <label for="race">RACE</label><br>
+					<select id="race" name="race">
+					<option value="0">White</option>
+					<option value="1">Black</option>
+					<option value="2">Asian Pac Islander</option>
+					<option value="3">Amer-Indian-Eskimo</option>
+				</select>
+
+            <br><br>
+			    <label for="edu_num" >Years in EDUCATION</label><br>
+                <input type="text" id="edu_num" name="edu_num" placeholder="Number of Years in Education." required="required">
+            
+            <br><br>
+			    <label for="workclass">WORK CLASS</label><br>
+                <select id="workclass" name="workclass">
+					<option value="0">?</option>
+					<option value="1">Private</option>
+					<option value="2">State-gov</option>
+					<option value="3">Federal Gov</option>
+					<option value="4">Self-emp-not-inc</option>
+					<option value="5">Self-emp-inc</option>
+					<option value="6">Local Gov</option>
+					<option value="7">Without-pay</option>
+					<option value="8">Never-worked</option>
+                </select>
+			
+			<br><br>
+                <label for="marital_status">MARITAL STATUS</label><br>
+                <select id="marital_status" name="marital_status">
+					<option value="0">Widowed</option>
+					<option value="1">Divorced</option>
+					<option value="2">Separated</option>
+					<option value="3">Never Married</option>
+					<option value="4">Married civ spouse</option>
+					<option value="5">Married spouse absent</option>
+					<option value="6">Married AF spouse</option>
+                </select>
+            
+            <br><br>
+                <label for="relationship">RELATIONSHIP</label><br>
+                <select id="relationship" name="relationship">
+					<option value="1">Husband</option>
+					<option value="1">Wife</option>
+					<option value="0">Own-child</option>
+					<option value="0">Unmarried</option>
+					<option value="0">Not In Family</option>
+					<option value="0">Other Relative</option>
+				</select>
+
+			<br><br>	
+			    <label for="hours_per_week">HOURS WORKED</label><br>
+                <input type="text" id="hours_per_week" name="hours_per_week" placeholder="The Hours an Individual has reported to Work per Week" required="required">
+
+			<br><br>
+				<label for="capital_gain">CAPITAL GAIN</label><br>
+                <input type="text" id="capital_gain" name="capital_gain" placeholder="Capital Gains for an Individual" required="required">
+            
+            <br><br>    
+                <label for="capital_loss">CAPITAL LOSS</label><br>
+                <input type="text" id="capital_loss" name="capital_loss" placeholder="Capital Gains for an Individual" required="required">
+            
+            <br><br>
+			<label for="fnlwgt" >FINAL WEIGHT</label><br>
+			<input type="text" id="fnlwgt" name="fnlwgt" placeholder=" The number of people the census believes the entry represents." required="required">            
+
+
+            <br><br>
+    <input type="submit" value="Submit">
+
+  </form>
+
+</div>
+
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        
+    </body>
+
+</html>
